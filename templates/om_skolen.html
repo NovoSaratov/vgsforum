@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-3 fw-bold" style="color:#43a047;">Om Forum VGS</h1>
+    <p class="lead">Vi er en moderne videregående skole dedikert til å forme fremtidens ledere og skapere.</p>
+</div>
+<div class="about-imgs mb-5">
+    <img src="/static/college.webp" alt="Studenter utenfor Forum VGS" class="img-fluid rounded shadow about-img about-img-1">
+    <img src="/static/czech_University_Students.jpg" alt="Studenter i forelesning på Forum VGS" class="img-fluid rounded shadow about-img about-img-2">
+</div>
+<div class="row justify-content-center mb-4">
+    <div class="col-md-4">
+        <div class="card p-4 mb-3 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#om1" aria-expanded="false" aria-controls="om1">
+            <h4 class="card-title">🎯 Vår Misjon</h4>
+            <p class="card-text">Forum VGS er dedikert til å gi elever en utmerket utdanning og forberede dem til fremtidige utfordringer.</p>
+            <div class="collapse" id="om1">
+                <p class="card-text mt-3">Vi fokuserer på både faglig og personlig utvikling, og tilbyr et bredt spekter av aktiviteter og støtteordninger.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-4 mb-3 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#om2" aria-expanded="false" aria-controls="om2">
+            <h4 class="card-title">🌟 Skolens Historie</h4>
+            <p class="card-text">Forum VGS ble grunnlagt i 1990 og har siden vært en ledende institusjon innen utdanning.</p>
+            <div class="collapse" id="om2">
+                <p class="card-text mt-3">Vi har en stolt tradisjon for innovasjon og kvalitet, og våre elever har oppnådd gode resultater både nasjonalt og internasjonalt.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-4 mb-3 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#om3" aria-expanded="false" aria-controls="om3">
+            <h4 class="card-title">🤝 Fellesskap</h4>
+            <p class="card-text">Vi bygger et inkluderende og støttende miljø for alle våre elever.</p>
+            <div class="collapse" id="om3">
+                <p class="card-text mt-3">Forum VGS har et aktivt elevråd, mange klubber og et sterkt fokus på trivsel og samarbeid.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center mt-5">
+    <a href="/kontakt" class="btn btn-success btn-lg px-5">Kontakt Oss</a>
+</div>
+<style>
+.about-imgs {
+    position: relative;
+    height: 260px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-img {
+    position: absolute;
+    width: 320px;
+    max-width: 90vw;
+    border: 6px solid #fff;
+    box-shadow: 0 12px 40px 0 rgba(67,160,71,0.18);
+    transition: transform 0.2s;
+}
+.about-img-1 {
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transform: rotate(-4deg) scale(1.03);
+}
+.about-img-2 {
+    right: 0;
+    top: 40px;
+    z-index: 1;
+    transform: rotate(5deg) scale(0.97);
+}
+@media (max-width: 900px) {
+    .about-imgs {
+        height: auto;
+        min-height: unset;
+        max-width: 95vw;
+    }
+    .about-img {
+        position: static;
+        display: block;
+        margin: 0 auto 1.2rem auto;
+        width: 95vw;
+        max-width: 400px;
+        border-width: 4px;
+        transform: none;
+    }
+}
+</style>
+{% endblock %} 

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-4 fw-bold" style="color:#43a047;">Søknad til Forum VGS</h1>
+    <p class="lead">Fyll ut skjemaet under for å søke om plass hos oss!</p>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card p-4 mb-4">
+            <form>
+                <div class="mb-3">
+                    <label for="navn" class="form-label">Navn</label>
+                    <input type="text" class="form-control" id="navn" placeholder="Ditt navn" required>
+                </div>
+                <div class="mb-3">
+                    <label for="epost" class="form-label">E-post</label>
+                    <input type="email" class="form-control" id="epost" placeholder="din@email.no" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefon" class="form-label">Telefon</label>
+                    <input type="tel" class="form-control" id="telefon" placeholder="123 45 678" required>
+                </div>
+                <div class="mb-3">
+                    <label for="motivasjon" class="form-label">Motivasjon</label>
+                    <textarea class="form-control" id="motivasjon" rows="4" placeholder="Hvorfor vil du gå på Forum VGS?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg w-100">Send søknad</button>
+            </form>
+            <div class="alert alert-success mt-4 d-none" id="successMsg">
+                Søknaden er sendt! Vi tar kontakt med deg snart.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

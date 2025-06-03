@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum VGS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f8fff8;
+            color: #155724;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            box-shadow: 0 2px 16px rgba(67,160,71,0.10);
+        }
+        .navbar-brand {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 2.1rem;
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(67,160,71,0.10), 0 1px 0 #fff;
+            color: unset !important;
+            padding: 0;
+            background-color: unset;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .navbar-brand i {
+            font-size: 1.3rem;
+            color: #43a047 !important;
+            margin-right: 0.2rem;
+            margin-top: 0.1rem;
+        }
+        .navbar-brand, .nav-link, .navbar-nav .nav-link.active {
+            color: #fff !important;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .card {
+            border: none;
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 32px 0 rgba(67,160,71,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(2px);
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 16px 48px 0 rgba(67,160,71,0.25);
+        }
+        .btn-success {
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.75rem 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 4px 16px rgba(67,160,71,0.10);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .btn-success:hover {
+            background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+            box-shadow: 0 8px 32px rgba(67,160,71,0.15);
+        }
+        .position-relative .position-absolute {
+            background: rgba(34, 197, 94, 0.25);
+            backdrop-filter: blur(4px);
+            border-radius: 1.2rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            box-shadow: 0 -2px 16px rgba(67,160,71,0.10);
+        }
+        @media (max-width: 768px) {
+            .display-3 {
+                font-size: 2.2rem;
+            }
+            .position-relative img {
+                height: 220px !important;
+            }
+        }
+        .hero-img-wrapper {
+            border-radius: 2.5rem;
+            overflow: hidden;
+        }
+        .hero-img-rounded {
+            border-radius: 2.5rem !important;
+        }
+        .hero-img-overlay {
+            border-radius: 2.5rem;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/" style="padding:0.2rem 0.7rem;">
+        <img src="/static/Forum_Logo_BlankAsset_4.png" alt="Forum VGS logo" style="height: 2.5rem; width: auto; display: block;">
+        <span style="font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 2.1rem; background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; letter-spacing: 2px; margin-left: 0.5rem;">Forum VGS</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Hjem</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/om-skolen">Om Skolen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/kontakt">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5">
+    {% block content %}{% endblock %}
+</div>
+<footer class="bg-success text-white text-center py-3 mt-5">
+    <div class="container">
+        <p class="mb-0">© 2025 Forum VGS. Alle rettigheter reservert.</p>
+        <div class="mt-2">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+// Demo JS for søknadsside
+if (window.location.pathname === '/soknad') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        const msg = document.getElementById('successMsg');
+        if (form && msg) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                msg.classList.remove('d-none');
+                form.reset();
+                form.classList.add('was-validated');
+            });
+        }
+    });
+}
+</script>
+</body>
+</html> 

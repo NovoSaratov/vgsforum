@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="position-relative mb-5 hero-img-wrapper">
+    <img src="https://edvardmunch.vgs.no/siteassets/bilder/bilde-med-himmel.jpg?quality=80&width=640" alt="Forum VGS" class="img-fluid w-100 hero-img-rounded" style="height: 400px; object-fit: cover;">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center hero-img-overlay">
+        <div class="text-center text-white">
+            <h1 class="display-3 fw-bold">Velkommen til Forum VGS!</h1>
+            <p class="lead">En moderne videregående skole for fremtidens ledere og skapere.</p>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center mb-4">
+    <div class="col-md-4">
+        <div class="card p-4 mb-3 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#info1" aria-expanded="false" aria-controls="info1">
+            <h4 class="card-title">🌱 Grønn Profil</h4>
+            <p class="card-text">Forum VGS satser på bærekraft og miljøvennlige løsninger i alle ledd.</p>
+            <div class="collapse" id="info1">
+                <p class="card-text mt-3">Vi har solceller på taket, resirkulerer alt avfall, og har en egen skolehage hvor elevene lærer om bærekraftig matproduksjon.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-4 mb-3 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#info2" aria-expanded="false" aria-controls="info2">
+            <h4 class="card-title">📚 Fremragende Undervisning</h4>
+            <p class="card-text">Våre lærere er engasjerte og gir deg kunnskapen du trenger for å lykkes.</p>
+            <div class="collapse" id="info2">
+                <p class="card-text mt-3">Vi bruker moderne læringsmetoder og teknologi for å sikre at alle elever får den beste utdanningen.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-4 mb-3 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#info3" aria-expanded="false" aria-controls="info3">
+            <h4 class="card-title">🤝 Inkluderende Miljø</h4>
+            <p class="card-text">Hos oss er alle velkomne, og vi bygger et sterkt fellesskap sammen.</p>
+            <div class="collapse" id="info3">
+                <p class="card-text mt-3">Vi arrangerer jevnlig sosiale aktiviteter og har et aktivt elevråd som jobber for å skape et inkluderende miljø.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center mt-5">
+    <a href="/soknad" class="btn btn-success btn-lg px-5">Søk nå</a>
+</div>
+{% endblock %} 

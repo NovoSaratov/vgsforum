@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-3 fw-bold" style="color:#43a047;">Kontakt Oss</h1>
+    <p class="lead">Vi er her for å hjelpe deg. Ta kontakt med oss for spørsmål eller mer informasjon.</p>
+</div>
+<div class="row justify-content-center mb-4">
+    <div class="col-md-6">
+        <div class="card p-4 mb-3">
+            <h4 class="card-title">📝 Kontakt Skjema</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Navn</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-post</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Melding</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card p-4 mb-3">
+            <h4 class="card-title">📍 Adresse</h4>
+            <p class="card-text">Forum VGS<br>123 Skoleveien<br>1234 Oslo, Norge</p>
+            <h4 class="card-title">📞 Telefon</h4>
+            <p class="card-text">+47 123 45 678</p>
+        </div>
+    </div>
+</div>
+<div class="text-center mt-5">
+    <a href="/" class="btn btn-success btn-lg px-5">Tilbake til Hjem</a>
+</div>
+{% endblock %} 
