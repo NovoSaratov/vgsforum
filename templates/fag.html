@@ -4,6 +4,39 @@
     <h1 class="display-3 fw-bold" style="color:#43a047;">Mulige Fag & Privatist</h1>
     <p class="lead">Forum VGS tilbyr et bredt spekter av fag og muligheter for privatister.</p>
 </div>
+<div class="mb-5">
+    <h2 class="fw-bold mb-4" style="color:#43a047;">Våre linjer</h2>
+    <div class="row justify-content-center g-4">
+        <div class="col-md-3">
+            <div class="card p-4 text-center shadow-sm hover-shadow h-100">
+                <div style="font-size:2.5rem;">🎓</div>
+                <h5 class="fw-bold mt-2">Studiespesialisering</h5>
+                <p class="mb-0">For deg som ønsker generell studiekompetanse og mange valgmuligheter videre.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-4 text-center shadow-sm hover-shadow h-100">
+                <div style="font-size:2.5rem;">🔬</div>
+                <h5 class="fw-bold mt-2">Realfag</h5>
+                <p class="mb-0">Fokus på matematikk, fysikk, kjemi og biologi for deg som liker naturvitenskap.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-4 text-center shadow-sm hover-shadow h-100">
+                <div style="font-size:2.5rem;">💻</div>
+                <h5 class="fw-bold mt-2">Informasjonsteknologi</h5>
+                <p class="mb-0">For deg som vil lære programmering, web, IT-drift og digital innovasjon.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-4 text-center shadow-sm hover-shadow h-100">
+                <div style="font-size:2.5rem;">🎨</div>
+                <h5 class="fw-bold mt-2">Kunst, design og arkitektur</h5>
+                <p class="mb-0">For deg som vil utvikle dine kreative evner innen visuelle fag og design.</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row justify-content-center mb-4">
     <div class="col-md-4 mb-4">
         <div class="card p-4 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#fag1" aria-expanded="false" aria-controls="fag1">
@@ -34,10 +67,10 @@
     </div>
     <div class="col-md-4 mb-4">
         <div class="card p-4 shadow-sm hover-shadow" role="button" data-bs-toggle="collapse" data-bs-target="#fag4" aria-expanded="false" aria-controls="fag4">
-            <h4 class="card-title">💻 Informasjonsteknologi</h4>
-            <p class="card-text">Programmering, web og digital kompetanse.</p>
+            <h4 class="card-title">🏃‍♂️ Idrettsfag</h4>
+            <p class="card-text">Fysisk aktivitet, trening og helse.</p>
             <div class="collapse" id="fag4">
-                <p class="card-text mt-3">Lær koding, webutvikling, IT-drift og digital sikkerhet.</p>
+                <p class="card-text mt-3">Idrettsfag gir deg mulighet til å utvikle deg innen ulike idretter, lære om trening, helse og samarbeid.</p>
             </div>
         </div>
     </div>
@@ -60,8 +93,8 @@
         </div>
     </div>
 </div>
-<div class="row justify-content-center mt-5">
-    <div class="col-lg-8">
+<div class="row justify-content-center mt-5 align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
         <div class="card p-4 shadow-sm" style="background:rgba(67,233,123,0.07);">
             <h3 class="mb-3" style="color:#43a047;">Privatistordning</h3>
             <p>Forum VGS tilbyr støtte og veiledning for privatister som ønsker å ta fag som privatist. Vi hjelper deg med påmelding, forberedelser og gir tilgang til ressurser og veiledning fra våre lærere.</p>
@@ -73,5 +106,37 @@
             </ul>
         </div>
     </div>
+    <div class="col-lg-5 d-flex justify-content-center">
+        <div class="privatist-img-wrapper">
+            <img src="/static/privatist.jpg" alt="Privatist" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
 </div>
+<style>
+.privatist-img-wrapper {
+    background: linear-gradient(120deg, #43e97b 0%, #38f9d7 100%);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(67,160,71,0.13);
+    display: inline-block;
+    margin-top: 1rem;
+}
+.privatist-img-wrapper img {
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px 0 rgba(67,160,71,0.18);
+    max-height: 320px;
+    object-fit: cover;
+}
+@media (max-width: 900px) {
+    .privatist-img-wrapper {
+        margin-top: 2rem;
+        padding: 0.5rem;
+        border-radius: 1.2rem;
+    }
+    .privatist-img-wrapper img {
+        max-height: 200px;
+        border-radius: 0.7rem;
+    }
+}
+</style>
 {% endblock %} 
